@@ -45,13 +45,22 @@
       border-right: none;
       border-left: 2px solid #C3504F;
       flex-direction: row-reverse;
+      .p-skillUp__ListItemTumb {
+        background-position: 80%;
+        @include desktop {
+          background-position: center;
+        }
+      }
     }
     &__ListItemTumb {
       display: inline-block;
       width: 40%;
       background-image: url("/images/skill_talk.jpg");
-      background-position: center;
+      background-position: 70%;
       background-size: cover;
+      @include desktop {
+        background-position: center;
+      }
     }
     &__ListItemDetail {
       display: inline-block;
