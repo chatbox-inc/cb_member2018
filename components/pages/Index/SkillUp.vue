@@ -63,7 +63,7 @@
     }
     &__headingIntro {
       margin-bottom: 40px;
-
+      line-height: 2;
     }
     &__Lists {
     }

@@ -56,10 +56,13 @@
     &__ListItemDetail {
       display: inline-block;
       width: 60%;
-      padding: 40px;
+      padding: 20px;
       box-sizing: border-box;
       vertical-align: top;
-
+      line-height: 2;
+      @include desktop {
+        padding: 40px;
+      }
     }
     &__ListItemDetailHeading {
       font-weight: bold;
