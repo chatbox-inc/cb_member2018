@@ -34,7 +34,6 @@ module.exports = {
    ** Modules
    */
     modules: [
-        // '@nuxtjs/pwa'
     ],
     plugins: [
       '~/plugins/vue-smooth-scroll'

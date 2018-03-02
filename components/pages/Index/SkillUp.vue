@@ -19,8 +19,7 @@ export default {
     skillItems: Array
   },
   data() {
-    return {
-    };
+    return {};
   },
   components: {
     SkillupList
