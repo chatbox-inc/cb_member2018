@@ -2,22 +2,16 @@
 
 > Nuxt.js project
 
-## Build Setup
+## 使い方
 
-``` bash
-# install dependencies
-$ npm install # Or yarn install
+サーバの起動
 
-# serve with hot reload at localhost:3000
-# service worker is disabled in dev
+````
 $ npm run dev
+````
 
-# build for production and launch server
-$ npm run build
-$ npm start
+コードのフォーマット
 
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+````
+$ npm run fix
+````
