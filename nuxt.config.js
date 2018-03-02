@@ -51,6 +51,9 @@ module.exports = {
    ** Modules
    */
     modules: [
+      ['@nuxtjs/google-analytics', {
+        id: 'UA-66526811-12'
+      }]
     ],
     plugins: [
       '~/plugins/vue-smooth-scroll'
