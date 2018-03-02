@@ -1,5 +1,5 @@
 <template>
-  <div class="p-header">
+  <div class="p-header" id="top">
     <a href="https://chatbox-inc.com/" target="_blank" class="p-header--triangle"></a>
     <div class="p-header--logoArea">
         <img class="p-header--logoImg" src="/images/logo.svg" alt="">
