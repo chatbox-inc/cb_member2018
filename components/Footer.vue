@@ -81,7 +81,7 @@
     display: inline-block;
     margin-right: 10px;
     width: 2.2rem;
-       height: 2.2rem;
+    height: 2.2rem;
     background-image: url("~static/images/icon_chatbox.svg");
     background-repeat: no-repeat;
     background-size: contain;
