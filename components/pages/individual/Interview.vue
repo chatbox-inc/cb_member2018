@@ -12,7 +12,7 @@
       <div class="p-interview__sec01">
         <div class="p-interview__sec01Img"></div>
         <div class="p-interview__sec01Keywords">
-          <span class="p-interview__sec01Keyword">築いていきたいのは</span>
+          <span class="p-interview__sec01Keyword">築いていきたいのは<br></span>
           <span class="p-interview__sec01Keyword">Webのこれからを語り会う会社</span>
         </div>
       </div>
@@ -47,12 +47,12 @@
 .p-interview {
   margin-bottom: 40px;
   @include desktop {
-    margin-bottom: 99px;
   }
   &__inner {
     @include c-container;
   }
   &__heading {
+    margin-bottom: 30px;
   }
   &__headingTitle {
     @include c-titleCenter;
@@ -64,17 +64,40 @@
       position: relative;
     }
   }
+  &__sec01Keywords {
+    width: 30%;
+    display: inline-block;
+    height: 300px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 2px;
+    margin: 30px 1em;
+    font-size: 1.8rem;
+    font-weight: 700;
+    vertical-align: top;
+    color: #c3504f;
+    position: relative;
+    left: 190px;
+    @include desktop() {
+      width: 60%;
+    }
+
+  }
   &__sec01Img {
     display: inline-block;
-    width: 100%;
+    width: 60%;
     background: url("http://placehold.it/445x540") no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
+    height: 400px;
+    position: absolute;
+    left: 0;
     @include desktop() {
       margin-bottom: 60px;
       background-position: center;
       width: 55%;
-      background-size: cover;
+      height: auto;
+      display: inline-block;
     }
     &::before {
       content: "";
@@ -109,9 +132,13 @@
   }
   &__sec02 {
     display: flex;
+    position: relative;
+    z-index: 1000;
     @include desktop() {
-      padding-bottom: 300px;
       position: relative;
+      top: -140px;
+      width: 48%;
+      margin-left:500px;
     }
   }
   &__sec02Img {
@@ -134,6 +161,11 @@
       content: "";
       display: block;
       padding-top: 70%;
+    }
+  }
+  &__sec02Description{
+    @include desktop() {
+      margin-top: 230px;
     }
   }
   &__sec02Keywords {

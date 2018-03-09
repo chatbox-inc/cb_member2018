@@ -37,7 +37,7 @@ export default {
     position: relative;
     z-index: 100;
     @include desktop {
-      margin-bottom: 0;
+      margin-bottom: 90px;
       width: 24%;
       z-index: 0;
     }

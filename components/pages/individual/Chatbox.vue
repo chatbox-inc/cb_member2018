@@ -6,7 +6,7 @@
           Q この文章はダミーです。文字の大きさ。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
           Q この文章はダミーです。文字の大きさ。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
       </p>
-      <a class="p-chatBox--button" href="">
+      <a class="p-chatBox__button" href="">
         <div class="p-chatBox__buttonImg" :style="thumbStyle"></div>
         <div class="p-chatBox__buttonText">
             <p>株式会社chatboxの</p>
@@ -59,13 +59,12 @@ export default {
     }
   }
   &__button {
-    display: inline-block;
-    padding: 3rem;
+    display: flex;
+    margin: 0 auto;
     width: 100%;
+    height: 140px;
     max-width: 100%;
     box-sizing: border-box;
-    text-align: center;
-    border-radius: 4px;
     color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
@@ -75,7 +74,7 @@ export default {
     transition: all 0.5s;
     line-height: 1.2;
     @include desktop {
-      max-width: 450px;
+      max-width: 600px;
       font-size: 2rem;
     }
     &:hover {
@@ -84,14 +83,24 @@ export default {
     }
   }
   &__buttonImg {
-    display: inline-block;
-    width: 243px;
-    height: 160px;
+      background-position: center;
+      display: inline-block;
+      width: 40%;
+      margin-right: auto;
+      height: 140px;
   }
   &__buttonText {
     display: inline-block;
+    width: 46%;
+    margin: 52px auto;
     color: #fff;
-    background-color: #c3504f;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-align: left;
+    @include desktop {
+        width: 38%;
+        margin: 44px auto;
+      }
   }
 }
 </style>
