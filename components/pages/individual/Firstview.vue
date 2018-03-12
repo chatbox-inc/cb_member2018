@@ -2,7 +2,7 @@
   <div class="p-firstView">
     <div class="p-firstView__inner">
       <div class="p-firstView__heading">
-        <h2 class="p-firstView__headingTitle">我輩は猫である。</h2>
+        <h2 class="p-firstView__headingTitle">我輩は猫である。</h2><br>
         <h2 class="p-firstView__headingTitle">名前はまだない。</h2>
         <p class="p-firstView__headingCompany">株式会社 chatbox</p>
         <p class="p-firstView__headingPosition">代表取締役</p>
@@ -25,13 +25,15 @@
   background-size: cover;
   position: relative;
   margin-bottom: 50px;
+  height: 500px;
   @include desktop {
     margin-bottom: 100px;
+    height: 600px;
   }
   &::before {
     content: "";
     display: block;
-    padding-top: 50%;
+    height: 500px;
     background: linear-gradient(
       90deg,
       rgba(195, 80, 79, 0.49) 0%,
@@ -39,18 +41,18 @@
       rgba(123, 5, 3, 0) 100%
     );
     @include desktop {
-      padding-top: 30%;
+      height: 600px;
     }
   }
   &::after {
     display: inline-block;
     content: "";
     width: 2px;
-    height: 20%;
+    height: 600px;
     background: #c3504f;
     position: absolute;
     left: 50%;
-    top: 90%;
+    top: 95%;
     transform: translateX(-1px);
     animation: border_sp 0.5s ease 0.5s alternate both running;
     @include desktop() {
@@ -94,9 +96,19 @@
     line-height: 1.5;
     @include desktop {
       margin-bottom: 10px;
-      font-size: 4.5rem;
+      font-size: 3rem;
       letter-spacing: 6px;
     }
+  }
+  &__headingCompany {
+    padding-top: 100px;
+    @include desktop {
+      padding-top: 30px;
+    }
+  }
+  &__headingName {
+    font-size: 3.5rem;
+    font-weight: bold;
   }
   &__headingIntro {
     font-size: 1.4rem;

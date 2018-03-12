@@ -39,9 +39,11 @@ export default {
 .p-introduction {
   @include c-container;
   margin-bottom: 120px;
+  margin-top: 200px;
   @include desktop() {
     margin-bottom: 196px;
     text-align: center;
+    margin-top: 0;
   }
   &__inner {
   }

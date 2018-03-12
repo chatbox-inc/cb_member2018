@@ -31,7 +31,7 @@ export default {
 @import "~assets/scss/object/component/_title.scss";
 
 .p-week {
-  margin-bottom: 0;
+  margin-bottom: 90px;
   @include desktop {
     margin-bottom: 130px;
   }
@@ -56,7 +56,6 @@ export default {
     flex-wrap: wrap;
     @include desktop {
       box-sizing: border-box;
-      padding: 0 40px;
       justify-content: space-between;
       flex-wrap: wrap;
     }
