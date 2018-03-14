@@ -6,7 +6,7 @@
           Q この文章はダミーです。文字の大きさ。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
           Q この文章はダミーです。文字の大きさ。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
       </p>
-      <a class="p-chatBox__button" href="">
+      <a class="p-chatBox__button" href="https://chatbox-inc.com/">
         <div class="p-chatBox__buttonImg" :style="thumbStyle"></div>
         <div class="p-chatBox__buttonText">
             <p>株式会社chatboxの</p>
@@ -21,7 +21,7 @@
 export default {
   computed: {
     thumbStyle() {
-      return { backgroundImage: `url('/images/skill_talk.jpg')` };
+      return { backgroundImage: `url('/images/concept_photo02.jpg')` };
     }
   }
 };
@@ -55,14 +55,14 @@ export default {
     margin-bottom: 2rem;
     @include desktop() {
       margin-bottom: 4rem;
-      text-align: left;
+      text-align: center;
     }
   }
   &__button {
     display: flex;
     margin: 0 auto;
     width: 100%;
-    height: 140px;
+    height: 80px;
     max-width: 100%;
     box-sizing: border-box;
     color: #fff;
@@ -74,6 +74,7 @@ export default {
     transition: all 0.5s;
     line-height: 1.2;
     @include desktop {
+      height: 140px;
       max-width: 600px;
       font-size: 2rem;
     }
@@ -85,20 +86,24 @@ export default {
   &__buttonImg {
     background-position: center;
     background-size: cover;
-    display: inline-block;
     width: 40%;
     margin-right: auto;
-    height: 140px;
+    height: 80px;
+    @include desktop {
+      height: 140px;
+    }
   }
   &__buttonText {
     display: inline-block;
-    width: 54%;
-    margin: 48px auto;
+    width: 45%;
+    margin: 26px auto;
     color: #fff;
     line-height: 1.5;
     letter-spacing: 1px;
     text-align: left;
+    font-size: 1.2rem;
     @include desktop {
+      font-size: 2rem;
       width: 38%;
       margin: 44px auto;
     }

@@ -2,11 +2,10 @@
   <div class="p-firstView">
     <div class="p-firstView__inner">
       <div class="p-firstView__heading">
-        <h2 class="p-firstView__headingTitle">我輩は猫である。</h2><br>
-        <h2 class="p-firstView__headingTitle">名前はまだない。</h2>
+        <h2 class="p-firstView__headingTitle">我輩は猫である。<br>名前はまだない。</h2>
         <p class="p-firstView__headingCompany">株式会社 chatbox</p>
         <p class="p-firstView__headingPosition">代表取締役</p>
-        <p class="p-firstView__headingName">後藤知宏</p>
+        <p class="p-firstView__headingName">後藤 知宏</p>
       </div>
     </div>
   </div>
@@ -34,12 +33,12 @@
     content: "";
     display: block;
     height: 500px;
-    background: linear-gradient(
-      90deg,
-      rgba(195, 80, 79, 0.49) 0%,
-      rgba(182, 80, 78, 0.29) 67.45%,
-      rgba(123, 5, 3, 0) 100%
-    );
+    /*background: linear-gradient(*/
+    /*90deg,*/
+    /*rgba(195, 80, 79, 0.49) 0%,*/
+    /*rgba(182, 80, 78, 0.29) 67.45%,*/
+    /*rgba(123, 5, 3, 0) 100%*/
+    /*);*/
     @include desktop {
       height: 600px;
     }
@@ -90,7 +89,7 @@
   }
   &__headingTitle {
     display: inline-block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 3px;
     line-height: 1.5;
@@ -107,8 +106,12 @@
     }
   }
   &__headingName {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    letter-spacing: 2px;
+    @include desktop {
+      font-size: 3.5rem;
+    }
   }
   &__headingIntro {
     font-size: 1.4rem;

@@ -36,34 +36,43 @@ export default {
     color: #393739;
     position: relative;
     z-index: 100;
+    :not(last:last-child) {
+      margin: 0;
+    }
     @include desktop {
       width: 23%;
       margin: 0 7px 90px 7px;
       z-index: 0;
     }
+    &:last-child {
+      margin: 0 3px 0 3px;
+      @include desktop {
+        margin: 0 7px 90px 7px;
+      }
+    }
     &::before {
       display: inline-block;
       border-radius: 100%;
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
       text-align: center;
-      line-height: 3.5;
+      line-height: 2.5;
       font-size: 1.4rem;
       color: #fff;
       background: #c3504f;
       position: absolute;
-      top: -40px;
-      left: 50%;
+      top: -30px;
+      left: 58%;
       transform: translateX(-40px);
       z-index: -10;
       @include desktop {
+        width: 80px;
+        height: 80px;
         border: none;
-        width: 100px;
-        height: 100px;
-        line-height: 4;
+        line-height: 3;
         font-size: 1.6rem;
-        top: -50px;
-        left: 50%;
+        top: -41px;
+        left: 55%;
         transform: translateX(-50px);
         z-index: -10;
       }
@@ -114,14 +123,15 @@ export default {
     }
   }
   &__listItemDescription {
+    text-align: left;
     padding: 2rem 1.7rem 2rem 1.7rem;
     @include desktop {
       padding: 1.5rem;
+      text-align: left;
     }
   }
   &__listItemDescriptionTitle {
     margin-bottom: 1rem;
-    text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 2px;
@@ -131,7 +141,6 @@ export default {
   }
   &__listItemDescriptionText {
     line-height: 2.5;
-    text-align: center;
   }
 }
 </style>

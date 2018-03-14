@@ -4,6 +4,7 @@
       <div class="p-interview__heading">
         <h3 class="p-interview__headingTitle">Interview</h3>
         <p class="p-interview__headingDescription">
+          <span></span>
           Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
           Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
           Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
@@ -22,11 +23,9 @@
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          </p>
-          <p>
+          <br>
             Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          </p>
-          <p>
+          <br>
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
@@ -47,6 +46,7 @@
 .p-interview {
   margin-bottom: 40px;
   @include desktop {
+    margin-bottom: 100px;
   }
   &__inner {
     @include c-container;
@@ -57,8 +57,11 @@
   &__headingTitle {
     @include c-titleCenter;
   }
-  &__headingIntro {
-  }
+  /*&__headingDescription{*/
+  /*span{*/
+  /*margin-top: 30px;*/
+  /*}*/
+  /*}*/
   &__sec01 {
     @include desktop() {
       position: relative;
@@ -71,7 +74,7 @@
     writing-mode: vertical-rl;
     text-orientation: upright;
     letter-spacing: 2px;
-    margin: 30px 1em;
+    margin: 30px 10px 30px 0;
     font-size: 1.8rem;
     font-weight: 700;
     vertical-align: top;
@@ -118,26 +121,25 @@
       padding: 20px 0 25% 130px;
       width: 60%;
       position: absolute;
-      background: linear-gradient(
-        left,
-        hsla(0, 0%, 99%, 0),
-        hsla(0, 0%, 99%, 0.5) 10%,
-        hsla(0, 0%, 100%, 0.8) 20%,
-        hsla(0, 0%, 100%, 0.85) 25%,
-        hsla(0, 0%, 100%, 0.9) 61%,
-        #fff 80%
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(hsla(0, 0%, 99%, 0)),
+        color-stop(10%, hsla(0, 0%, 99%, 0.5)),
+        color-stop(20%, hsla(0, 0%, 100%, 0.8)),
+        color-stop(25%, hsla(0, 0%, 100%, 0.85)),
+        color-stop(61%, hsla(0, 0%, 100%, 0.9)),
+        color-stop(80%, #fff)
       );
     }
   }
   &__sec02 {
-    display: flex;
     position: relative;
     z-index: 1000;
+    left: -20px;
     @include desktop() {
-      position: relative;
-      top: -140px;
-      width: 48%;
-      margin-left: 500px;
+      left: 0;
     }
   }
   &__sec02Img {
@@ -163,19 +165,33 @@
     }
   }
   &__sec02Description {
-    background: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(hsla(0, 0%, 99%, 0)),
-      color-stop(10%, hsla(0, 0%, 99%, 0.5)),
-      color-stop(20%, hsla(0, 0%, 100%, 0.8)),
-      color-stop(25%, hsla(0, 0%, 100%, 0.85)),
-      color-stop(61%, hsla(0, 0%, 100%, 0.9)),
-      color-stop(80%, #fff)
+    padding-top: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.72) 4%,
+      rgba(255, 255, 255, 1) 37%,
+      rgba(255, 255, 255, 1) 46%,
+      rgba(255, 255, 255, 1) 98%
     );
     @include desktop() {
-      margin-top: 230px;
+      padding-top: 100px;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.72) 17%,
+        rgba(255, 255, 255, 1) 37%,
+        rgba(255, 255, 255, 1) 46%,
+        rgba(255, 255, 255, 1) 98%
+      );
+    }
+    p {
+      width: 100%;
+      margin-left: auto;
+      padding-left: 20px;
+      @include desktop() {
+        width: 60%;
+      }
     }
   }
   &__sec02Keywords {
@@ -184,9 +200,6 @@
     width: 40%;
     text-align: center;
     @include desktop() {
-      width: 50%;
-      position: absolute;
-      top: -60px;
       left: 0;
       background: linear-gradient(
         top,

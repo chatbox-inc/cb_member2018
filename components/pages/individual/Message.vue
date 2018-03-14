@@ -1,20 +1,21 @@
 <template>
-    <section class="p-messege__bg">
-    <div class="p-messege__inner">
-        <div class="p-messege__contents">
-            <h3 class="p-messege__headingTitle">Message</h3>
-            <p class="p-messege__headingDescription">
-                Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-            </p>
-            <p class="p-messege__headingDescription">
-                Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-            </p>
+    <section class="p-messege">
+        <div class="p-messege__bg">
+            <div class="p-messege__inner">
+                <div class="p-messege__contents">
+                    <h3 class="p-messege__headingTitle">Message</h3>
+                    <p class="p-messege__headingDescription">
+                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                    <br>
+                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
     </section>
 </template>
 
@@ -48,7 +49,7 @@
     width: 100%;
     margin-left: auto;
     position: relative;
-    top: 134px;
+    top: 220px;
     background-color: rgba(195, 80, 79, 0.9);
     @include desktop() {
       width: 40%;
@@ -57,18 +58,18 @@
     }
   }
   &__headingTitle {
-    padding: 30px 0;
+    padding: 25px 0;
     font-size: 2.5rem;
     font-family: Yu Mincho Medium, YuMincho, serif;
     font-weight: 400;
-    color: #fff;
+    line-height: 1;
     text-align: center;
+    color: #fff;
     background-size: cover;
     &::first-letter {
       font-size: 1.5em;
       color: #fff;
       @include desktop {
-        font-size: 1.5em;
         color: #c3504f;
       }
     }
@@ -79,7 +80,7 @@
   }
   &__headingDescription {
     color: #fff;
-    text-align: center;
+    text-align: left;
     padding: 0 13px 50px 13px;
     @include desktop {
     }
