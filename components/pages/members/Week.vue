@@ -19,7 +19,9 @@
 <script>
 import Week from "./_Week.vue";
 export default {
-  props: {},
+  props: {
+    item: Object
+  },
   components: {
     Week
   }

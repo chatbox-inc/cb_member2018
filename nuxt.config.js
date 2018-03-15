@@ -47,6 +47,14 @@ module.exports = {
     manifest: {
         theme_color: '#3B8070'
     },
+    generate: {
+      routes: [
+        '/members/mikakane/',
+        '/members/yasui',
+        '/members/shono/',
+        '/members/kaie',
+      ]
+    },
   /*
    ** Modules
    */
