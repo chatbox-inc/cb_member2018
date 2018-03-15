@@ -80,7 +80,10 @@ export default {
   &__ListItemDetailHeading {
     font-weight: bold;
     margin-bottom: 1em;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
+    @include desktop {
+      font-size: 1.9rem;
+    }
   }
   &__ListItemDetailDescription {
   }
