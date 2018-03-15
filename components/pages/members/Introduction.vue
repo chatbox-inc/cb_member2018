@@ -36,6 +36,9 @@
 
 <script>
 export default {
+  props:{
+    item: Object
+  },
   computed: {
     thumbStyle() {
       return { backgroundImage: `url('/images/skill_talk.jpg')` };
