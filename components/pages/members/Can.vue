@@ -19,7 +19,7 @@
 <script>
 import Can from "./_Can.vue";
 export default {
-  props:{
+  props: {
     item: Object
   },
   components: {

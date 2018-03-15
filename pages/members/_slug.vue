@@ -30,10 +30,8 @@ export default {
       return this.$store.state.listItems;
     },
     member() {
-      return this.$store.state.members[this.$route.params.slug]
+      return this.$store.state.members[this.$route.params.slug];
     }
-
-
   },
   components: {
     membersFirstview,
