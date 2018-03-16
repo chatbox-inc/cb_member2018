@@ -1,18 +1,16 @@
 <template>
-  <li :class="'p-week__listItem num0' + (index-1)">
+  <li :class="'p-week__listItem num0' + (index)">
     <div class="p-week__listItemThumb" :style="thumbStyle"></div>
     <div class="p-week__listItemDescription">
-      <div class="p-week__listItemDescriptionTitle">企画を練り、企画書を作成</div>
-      <p class="p-week__listItemDescriptionText">
-        この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-      </p>
+      <div class="p-week__listItemDescriptionTitle">{{item.title}}</div>
+      <p class="p-week__listItemDescriptionText">{{item.description}}</p>
     </div>
   </li>
 </template>
 
 <script>
 export default {
-  props: ["index"],
+  props: ["index", "item"],
   computed: {
     thumbStyle() {
       return { backgroundImage: `url('/images/skill_talk.jpg')` };

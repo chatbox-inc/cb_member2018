@@ -2,8 +2,8 @@
   <section>
     <members-firstview :item="member.firstView"></members-firstview>
     <members-interview :item="member.interview"></members-interview>
-    <members-week :item="member.weekItems"></members-week>
-    <members-can :item="member.canItems"></members-can>
+    <members-week :items="member.weekItems"></members-week>
+    <members-can :items="member.canItems"></members-can>
     <members-message :item="member.message"></members-message>
     <members-introduction :item="member.profile"></members-introduction>
     <page-member :list-items="listItems"></page-member>

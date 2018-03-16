@@ -4,15 +4,7 @@
             <div class="p-messege__inner">
                 <div class="p-messege__contents">
                     <h3 class="p-messege__headingTitle">Message</h3>
-                    <p class="p-messege__headingDescription">
-                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                    <br>
-                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                        Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                    </p>
+                    <div class="p-messege__headingDescription" v-html="marked(item)"></div>
                 </div>
             </div>
         </div>
@@ -22,7 +14,7 @@
 <script>
 export default {
   props: {
-    item: Object
+    item: String
   }
 };
 </script>

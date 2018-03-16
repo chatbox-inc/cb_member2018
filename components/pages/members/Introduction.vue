@@ -5,13 +5,10 @@
         <div class="p-introduction__listItemThumb" :style="thumbStyle"></div>
       </div>
       <div class="p-introduction__listItems">
-        <div class="p-introduction__listItemPosition">株式会社 chatbox / 代表取締役</div>
-        <p class="p-introduction__listItemName">後藤 知宏</p>
-        <div class="p-introduction__listItemNameEn">Goto Tomohiro</div>
-        <p class="p-introduction__listItemDescription">
-          Q この文章はダミーです。文字の大きさ。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          Q この文章はダミーです。文字の大きさ。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-        </p>
+        <div class="p-introduction__listItemPosition">株式会社 chatbox / {{item.role}}</div>
+        <p class="p-introduction__listItemName">{{item.name}}</p>
+        <div class="p-introduction__listItemNameEn">{{item.kana}}</div>
+        <p class="p-introduction__listItemDescription" v-html="marked(item.profile)"></p>
         <div class="p-introduction__listItemSns">
           <a href="">
             <span class="p-introduction__twitter">

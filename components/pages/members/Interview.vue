@@ -3,24 +3,18 @@
     <div class="p-interview__inner">
       <div class="p-interview__heading">
         <h3 class="p-interview__headingTitle">Interview</h3>
-        <p class="p-interview__headingDescription">
-          <span></span>
-          Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-        </p>
+        <p class="p-interview__headingDescription">{{item.question}}</p>
       </div>
       <div class="p-interview__sec01">
         <div class="p-interview__sec01Img"></div>
         <div class="p-interview__sec01Keywords">
-          <span class="p-interview__sec01Keyword">築いていきたいのは<br></span>
-          <span class="p-interview__sec01Keyword">Webのこれからを語り会う会社</span>
+          <span class="p-interview__sec01Keyword" v-html="marked(item.title)"></span>
         </div>
       </div>
       <div class="p-interview__sec02">
-        <div class="p-interview__sec02Description">
+        <div class="p-interview__sec02Description" v-html="marked(item.answer)">
           <p>
-            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+            ssddこの文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
           <br>
@@ -190,7 +184,7 @@ export default {
         rgba(255, 255, 255, 1) 98%
       );
     }
-    p {
+    /deep/ p {
       width: 100%;
       margin-left: auto;
       padding-left: 20px;

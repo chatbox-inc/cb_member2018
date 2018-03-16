@@ -64,6 +64,7 @@ module.exports = {
       }]
     ],
     plugins: [
-      '~/plugins/vue-smooth-scroll'
+      '~/plugins/marked',
+      '~/plugins/vue-smooth-scroll',
     ]
 }
