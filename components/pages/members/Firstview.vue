@@ -2,10 +2,10 @@
   <div class="p-firstView">
     <div class="p-firstView__inner">
       <div class="p-firstView__heading">
-        <h2 class="p-firstView__headingTitle">我輩は猫である。<br>名前はまだない。</h2>
+        <h2 class="p-firstView__headingTitle" v-html="marked(item.title)"></h2>
         <p class="p-firstView__headingCompany">株式会社 chatbox</p>
-        <p class="p-firstView__headingPosition">代表取締役</p>
-        <p class="p-firstView__headingName">後藤 知宏</p>
+        <p class="p-firstView__headingPosition">{{item.role}}</p>
+        <p class="p-firstView__headingName">{{item.name}}</p>
       </div>
     </div>
   </div>

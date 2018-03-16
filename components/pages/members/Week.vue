@@ -3,14 +3,10 @@
     <div class="p-week__inner">
       <div class="p-week__heading">
         <h3 class="p-week__headingTitle">For a week</h3>
-        <p class="p-week__headingIntro">
-          Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-        </p>
+        <div class="p-week__headingIntro" v-html="marked(items.summary)"></div>
       </div>
       <ul class="p-week__lists">
-        <week v-for="index in 7" :key="index" :index="index+1"></week>
+        <week v-for="(item,index) in items.days" :key="index" :index="index+1" :item="item"></week>
       </ul>
     </div>
   </section>
@@ -20,7 +16,7 @@
 import Week from "./_Week.vue";
 export default {
   props: {
-    item: Object
+    items: Object
   },
   components: {
     Week
