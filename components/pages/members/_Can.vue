@@ -24,7 +24,7 @@ export default {
       };
     },
     thumbStyle() {
-      return { backgroundImage: `url('/images/skill_talk.jpg')` };
+      return { backgroundImage: `url('/images/mikakane/can_01.jpg')` };
     }
   },
   data() {

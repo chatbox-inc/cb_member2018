@@ -13,7 +13,7 @@ export default {
   props: ["index", "item"],
   computed: {
     thumbStyle() {
-      return { backgroundImage: `url('/images/skill_talk.jpg')` };
+      return { backgroundImage: `url('/images/mikakane/week_mon.jpg')` };
     }
   }
 };

@@ -8,7 +8,7 @@
         <div class="p-introduction__listItemPosition">株式会社 chatbox / {{item.role}}</div>
         <p class="p-introduction__listItemName">{{item.name}}</p>
         <div class="p-introduction__listItemNameEn">{{item.kana}}</div>
-        <p class="p-introduction__listItemDescription" v-html="marked(item.profile)"></p>
+        <div class="p-introduction__listItemDescription" v-html="marked(item.profile)"></div>
         <div class="p-introduction__listItemSns">
           <a href="">
             <span class="p-introduction__twitter">
@@ -38,7 +38,9 @@ export default {
   },
   computed: {
     thumbStyle() {
-      return { backgroundImage: `url('/images/skill_talk.jpg')` };
+      return {
+        backgroundImage: `url('/images/mikakane/introduction_icon.jpg')`
+      };
     }
   }
 };
