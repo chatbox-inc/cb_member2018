@@ -87,7 +87,7 @@ export default {
   &__sec01Img {
     display: inline-block;
     width: 60%;
-    background: url("/images/skill_talk.jpg") no-repeat;
+    background: url("/images/mikakane/interview_top.jpg") no-repeat;
     background-position: top;
     background-size: cover;
     height: 400px;

@@ -25,7 +25,7 @@ export default {
 @import "~assets/scss/object/component/_title.scss";
 
 .p-firstView {
-  background: url("/images/skill_talk.jpg") center no-repeat;
+  background: url("/images/mikakane/firstview_top.jpg") center no-repeat;
   background-size: cover;
   position: relative;
   margin-bottom: 50px;

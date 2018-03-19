@@ -27,7 +27,7 @@ export default {
   @include desktop {
   }
   &__bg {
-    background-image: url(/images/skill_talk.jpg);
+    background-image: url(/images/mikakane/messege_top.jpg);
     text-align: right;
     margin-bottom: 85px;
     width: 100%;
