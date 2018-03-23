@@ -17,12 +17,12 @@
           </a>
           <a href="">
             <span class="p-introduction__twitter">
-              <i aria-hidden="true" class="fa fa-twitter fa-2x" data-v-0d2d6594=""></i>
+              <i aria-hidden="true" class="fa fa-facebook fa-2x" data-v-0d2d6594=""></i>
             </span>
           </a>
           <a href="">
             <span class="p-introduction__twitter">
-              <i aria-hidden="true" class="fa fa-twitter fa-2x" data-v-0d2d6594=""></i>
+              <i aria-hidden="true" class="fa fa-link fa-2x" data-v-0d2d6594=""></i>
             </span>
           </a>
         </div>
@@ -87,6 +87,9 @@ export default {
       max-width: 100%;
       margin: 0 auto;
       padding: 0 20px;
+    }
+    i {
+      color: #fff;
     }
   }
   &__listItemThumb {
@@ -157,9 +160,6 @@ export default {
     @include desktop {
       margin-right: 2rem;
     }
-  }
-  .fa-twitter:before {
-    color: #fff;
   }
 }
 </style>
