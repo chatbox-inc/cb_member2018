@@ -3,14 +3,10 @@
     <div class="p-can__inner">
       <div class="p-can__heading">
         <h3 class="p-can__headingTitle">What I can</h3>
-        <p class="p-can__headingIntro">
-            Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-            Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-            Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-        </p>
+        <div class="p-can__headingIntro" v-html="marked(items.summary)"></div>
       </div>
       <ul class="p-can__Lists">
-        <can :index="index" v-for="index in 3" :key="index"></can>
+        <can :index="index" v-for="(item,index) in items.contents" :key="index"></can>
       </ul>
     </div>
   </section>
@@ -19,6 +15,9 @@
 <script>
 import Can from "./_Can.vue";
 export default {
+  props: {
+    items: Object
+  },
   components: {
     Can
   }
@@ -43,6 +42,9 @@ export default {
   }
   &__headingIntro {
     margin-bottom: 40px;
+    @include desktop {
+      padding: 0 92px;
+    }
   }
   &__Lists {
   }

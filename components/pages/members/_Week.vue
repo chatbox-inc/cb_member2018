@@ -1,21 +1,19 @@
 <template>
-  <li :class="'p-week__listItem num0' + (index-1)">
+  <li :class="'p-week__listItem num0' + (index)">
     <div class="p-week__listItemThumb" :style="thumbStyle"></div>
     <div class="p-week__listItemDescription">
-      <div class="p-week__listItemDescriptionTitle">企画を練り、企画書を作成</div>
-      <p class="p-week__listItemDescriptionText">
-        この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-      </p>
+      <div class="p-week__listItemDescriptionTitle">{{item.title}}</div>
+      <p class="p-week__listItemDescriptionText">{{item.description}}</p>
     </div>
   </li>
 </template>
 
 <script>
 export default {
-  props: ["index"],
+  props: ["index", "item"],
   computed: {
     thumbStyle() {
-      return { backgroundImage: `url('http://placehold.it/480x480')` };
+      return { backgroundImage: `url('/images/mikakane/week_mon.jpg')` };
     }
   }
 };
@@ -29,41 +27,50 @@ export default {
   &__listItem {
     display: block;
     border-top: 3px solid #c3504f;
-    margin-bottom: 60px;
-    width: 100%;
+    margin: 0 3px 60px 3px;
+    width: 46%;
     background: #faf7f7;
     text-decoration: none;
     color: #393739;
     position: relative;
     z-index: 100;
+    :not(last:last-child) {
+      margin: 0;
+    }
     @include desktop {
-      margin-bottom: 90px;
-      width: 24%;
+      width: 23%;
+      margin: 0 7px 90px 7px;
       z-index: 0;
+    }
+    &:last-child {
+      margin: 0 3px 0 3px;
+      @include desktop {
+        margin: 0 7px 90px 7px;
+      }
     }
     &::before {
       display: inline-block;
       border-radius: 100%;
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
       text-align: center;
-      line-height: 3.5;
+      line-height: 2.5;
       font-size: 1.4rem;
       color: #fff;
       background: #c3504f;
       position: absolute;
-      top: -40px;
-      left: 50%;
+      top: -30px;
+      left: 58%;
       transform: translateX(-40px);
       z-index: -10;
       @include desktop {
+        width: 80px;
+        height: 80px;
         border: none;
-        width: 100px;
-        height: 100px;
-        line-height: 4;
+        line-height: 3;
         font-size: 1.6rem;
-        top: -50px;
-        left: 50%;
+        top: -41px;
+        left: 55%;
         transform: translateX(-50px);
         z-index: -10;
       }
@@ -114,14 +121,15 @@ export default {
     }
   }
   &__listItemDescription {
+    text-align: left;
     padding: 2rem 1.7rem 2rem 1.7rem;
     @include desktop {
       padding: 1.5rem;
+      text-align: left;
     }
   }
   &__listItemDescriptionTitle {
     margin-bottom: 1rem;
-    text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 2px;
@@ -131,7 +139,6 @@ export default {
   }
   &__listItemDescriptionText {
     line-height: 2.5;
-    text-align: center;
   }
 }
 </style>

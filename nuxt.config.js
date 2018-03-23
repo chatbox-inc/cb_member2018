@@ -47,6 +47,14 @@ module.exports = {
     manifest: {
         theme_color: '#3B8070'
     },
+    generate: {
+      routes: [
+        '/members/mikakane/',
+        '/members/yasui',
+        '/members/shono/',
+        '/members/kaie',
+      ]
+    },
   /*
    ** Modules
    */
@@ -56,6 +64,7 @@ module.exports = {
       }]
     ],
     plugins: [
-      '~/plugins/vue-smooth-scroll'
+      '~/plugins/marked',
+      '~/plugins/vue-smooth-scroll',
     ]
 }

@@ -3,30 +3,23 @@
     <div class="p-interview__inner">
       <div class="p-interview__heading">
         <h3 class="p-interview__headingTitle">Interview</h3>
-        <p class="p-interview__headingDescription">
-          Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-        </p>
+        <p class="p-interview__headingDescription">{{item.question}}</p>
       </div>
       <div class="p-interview__sec01">
         <div class="p-interview__sec01Img"></div>
         <div class="p-interview__sec01Keywords">
-          <span class="p-interview__sec01Keyword">築いていきたいのは<br></span>
-          <span class="p-interview__sec01Keyword">Webのこれからを語り会う会社</span>
+          <span class="p-interview__sec01Keyword" v-html="marked(item.title)"></span>
         </div>
       </div>
       <div class="p-interview__sec02">
-        <div class="p-interview__sec02Description">
+        <div class="p-interview__sec02Description" v-html="marked(item.answer)">
           <p>
+            ssddこの文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          </p>
-          <p>
+          <br>
             Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          </p>
-          <p>
+          <br>
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
             この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
@@ -38,6 +31,11 @@
 </template>
 
 <script>
+export default {
+  props: {
+    item: Object
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -47,6 +45,7 @@
 .p-interview {
   margin-bottom: 40px;
   @include desktop {
+    margin-bottom: 100px;
   }
   &__inner {
     @include c-container;
@@ -57,8 +56,11 @@
   &__headingTitle {
     @include c-titleCenter;
   }
-  &__headingIntro {
-  }
+  /*&__headingDescription{*/
+  /*span{*/
+  /*margin-top: 30px;*/
+  /*}*/
+  /*}*/
   &__sec01 {
     @include desktop() {
       position: relative;
@@ -71,13 +73,13 @@
     writing-mode: vertical-rl;
     text-orientation: upright;
     letter-spacing: 2px;
-    margin: 30px 1em;
+    margin: 30px 10px 30px 0;
     font-size: 1.8rem;
     font-weight: 700;
     vertical-align: top;
     color: #c3504f;
     position: relative;
-    left: 190px;
+    left: 180px;
     @include desktop() {
       width: 60%;
     }
@@ -85,7 +87,7 @@
   &__sec01Img {
     display: inline-block;
     width: 60%;
-    background: url("http://placehold.it/445x540") no-repeat;
+    background: url("/images/mikakane/interview_top.jpg") no-repeat;
     background-position: top;
     background-size: cover;
     height: 400px;
@@ -118,26 +120,25 @@
       padding: 20px 0 25% 130px;
       width: 60%;
       position: absolute;
-      background: linear-gradient(
-        left,
-        hsla(0, 0%, 99%, 0),
-        hsla(0, 0%, 99%, 0.5) 10%,
-        hsla(0, 0%, 100%, 0.8) 20%,
-        hsla(0, 0%, 100%, 0.85) 25%,
-        hsla(0, 0%, 100%, 0.9) 61%,
-        #fff 80%
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(hsla(0, 0%, 99%, 0)),
+        color-stop(10%, hsla(0, 0%, 99%, 0.5)),
+        color-stop(20%, hsla(0, 0%, 100%, 0.8)),
+        color-stop(25%, hsla(0, 0%, 100%, 0.85)),
+        color-stop(61%, hsla(0, 0%, 100%, 0.9)),
+        color-stop(80%, #fff)
       );
     }
   }
   &__sec02 {
-    display: flex;
     position: relative;
     z-index: 1000;
+    left: -20px;
     @include desktop() {
-      position: relative;
-      top: -140px;
-      width: 48%;
-      margin-left: 500px;
+      left: 0;
     }
   }
   &__sec02Img {
@@ -163,8 +164,33 @@
     }
   }
   &__sec02Description {
+    padding-top: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.72) 4%,
+      rgba(255, 255, 255, 1) 37%,
+      rgba(255, 255, 255, 1) 46%,
+      rgba(255, 255, 255, 1) 98%
+    );
     @include desktop() {
-      margin-top: 230px;
+      padding-top: 100px;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.72) 17%,
+        rgba(255, 255, 255, 1) 37%,
+        rgba(255, 255, 255, 1) 46%,
+        rgba(255, 255, 255, 1) 98%
+      );
+    }
+    /deep/ p {
+      width: 100%;
+      margin-left: auto;
+      padding-left: 20px;
+      @include desktop() {
+        width: 60%;
+      }
     }
   }
   &__sec02Keywords {
@@ -173,9 +199,6 @@
     width: 40%;
     text-align: center;
     @include desktop() {
-      width: 50%;
-      position: absolute;
-      top: -60px;
       left: 0;
       background: linear-gradient(
         top,

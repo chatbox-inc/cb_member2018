@@ -5,17 +5,26 @@
         <div class="p-introduction__listItemThumb" :style="thumbStyle"></div>
       </div>
       <div class="p-introduction__listItems">
-        <div class="p-introduction__listItemPosition">株式会社 chatbox / 代表取締役</div>
-        <p class="p-introduction__listItemName">後藤 知宏</p>
-        <div class="p-introduction__listItemNameEn">Goto Tomohiro</div>
-        <p class="p-introduction__listItemDescription">
-          Q この文章はダミーです。文字の大きさ。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          Q この文章はダミーです。文字の大きさ。Q この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-        </p>
+        <div class="p-introduction__listItemPosition">株式会社 chatbox / {{item.role}}</div>
+        <p class="p-introduction__listItemName">{{item.name}}</p>
+        <div class="p-introduction__listItemNameEn">{{item.kana}}</div>
+        <div class="p-introduction__listItemDescription" v-html="marked(item.profile)"></div>
         <div class="p-introduction__listItemSns">
-            <span class="p-introduction__twitter"></span>
-            <span class="p-introduction__twitter"></span>
-            <span class="p-introduction__twitter"></span>
+          <a href="">
+            <span class="p-introduction__twitter">
+              <i aria-hidden="true" class="fa fa-twitter fa-2x" data-v-0d2d6594=""></i>
+            </span>
+          </a>
+          <a href="">
+            <span class="p-introduction__twitter">
+              <i aria-hidden="true" class="fa fa-facebook fa-2x" data-v-0d2d6594=""></i>
+            </span>
+          </a>
+          <a href="">
+            <span class="p-introduction__twitter">
+              <i aria-hidden="true" class="fa fa-link fa-2x" data-v-0d2d6594=""></i>
+            </span>
+          </a>
         </div>
       </div>
     </div>
@@ -24,9 +33,14 @@
 
 <script>
 export default {
+  props: {
+    item: Object
+  },
   computed: {
     thumbStyle() {
-      return { backgroundImage: `url('http://placehold.it/350x350')` };
+      return {
+        backgroundImage: `url('/images/mikakane/introduction_icon.jpg')`
+      };
     }
   }
 };
@@ -38,14 +52,12 @@ export default {
 
 .p-introduction {
   @include c-container;
-  margin-bottom: 120px;
-  margin-top: 200px;
+  margin-bottom: 100px;
+  margin-top: 260px;
   @include desktop() {
     margin-bottom: 196px;
     text-align: center;
     margin-top: 0;
-  }
-  &__inner {
   }
   &__listItem {
     padding-left: 2%;
@@ -76,18 +88,25 @@ export default {
       margin: 0 auto;
       padding: 0 20px;
     }
+    i {
+      color: #fff;
+    }
   }
   &__listItemThumb {
-    margin-bottom: 10px;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto 10px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
+    @include desktop {
+      width: 100%;
+    }
     &::before {
       content: "";
       display: block;
       padding-top: 100%;
+      margin: 0 auto;
     }
   }
   &__listItemPosition {
@@ -125,6 +144,7 @@ export default {
     margin-bottom: 2rem;
   }
   &__listItemSns {
+    margin-top: 10px;
     color: #fff;
   }
   &__twitter {
@@ -134,6 +154,9 @@ export default {
     background-color: #c3504f;
     margin-right: 1rem;
     border-radius: 50%;
+    i {
+      padding-top: 13px;
+    }
     @include desktop {
       margin-right: 2rem;
     }
